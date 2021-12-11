@@ -18,6 +18,7 @@ body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 .booking-form-box {
   padding: 5%;
@@ -36,6 +37,7 @@ input[type="text"] {
   border: 2px solid #ccc;
   -webkit-border-radius: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 input[type="text"]:focus {
