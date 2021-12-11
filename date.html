@@ -32,25 +32,48 @@
         <div class="booking-form">
             
             <label for="">Deperature From</label>
-            <input required type="text" class="form-control" placeholder="                        Area"/><br>
+            <input id="myInput" type="text" class="form-control" placeholder="Departure From"/><br>
             <label for="">Arrival To</label>
-            <input required type="text" class="form-control" placeholder="                        Area"/><br>
+            <input  id="myInput2"  type="text" class="form-control" placeholder="Arrival To"/><br>
             <label for="">Date</label><br>
-            <input required type="text" id="datepicker" class="date" placeholder="            dd / mm / yr"><br>
+            <input  type="text" id="datepicker" class="date" placeholder="dd / mm / yr"><br>
             <br>
             <!-- <input type="submit" id="next_page" value="Submit"> -->
-            <a style="text-decoration: none; color: aqua; background-color: brown; padding: 2px; " href="./main.html">submit</a>
+            <a id="sub" style="text-decoration: none; color: aqua; background-color: brown; padding: 2px; " href="#">submit</a>
         </div>  
     </form>
          
     </div>
 
     <script>
-        document.getElementById("next_page").addEventListener(
-            "click",function(){
-                window.location="./main.html"
-            }
-        )
+       
+       
+       document.getElementById("sub").addEventListener("click",function(){
+
+        var departure =  document.getElementById("myInput").value;
+       var arrival = document.getElementById("myInput2").value;
+       var date = document.getElementById("datepicker").value;
+
+        // console.log(`${departure} | ${arrival} | ${date}`)
+
+        if(departure ==="" || arrival ===""  || date ==="")
+        {
+            alert("Please put some data");
+            document.getElementById("from").value="";
+            document.getElementById("To").value="";
+            document.getElementById("datepicker").value="";
+
+        }else{
+
+            window.location = "./main.html"
+           
+        }
+
+       })
+
+       
     </script>
+
+    <script src="./js/search.js"></script>
 </body>
 </html>
